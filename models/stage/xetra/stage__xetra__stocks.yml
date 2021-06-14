@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stage__xetra__stocks
+    description: Incremental model for Xetra Stocks Data
+    columns:
+      - name: ID
+        description: ID of the record
+        tests:
+          - not_null
+          - unique
+      - name: ISIN
+        description: ISIN of the security
+      - name: STOCK_TICKER
+        description: Stock exchange ticker symbol
+      - name: SECURITY_DESCRIPTION
+        description: Description of the security
+      - name: SECURITY_TYPE
+        description: Type of security
+      - name: TRADED_CURRENCY
+        description: Currency in which the product is traded
+      - name: SECURITY_ID
+        description: Unique identifier for each contract
+      - name: TRADING_PERIOD_DATE
+        description: Date of trading period
+      - name: TRADING_PERIOD_TIME
+        description: Minute of trading to which this entry relates
+      - name: START_PRICE
+        description: Trading price at the start of period
+      - name: MAXIMUM_PRICE
+        description: Maximum price over the period
+      - name: MINUMUM_PRICE
+        description: Minimum price over the period
+      - name: END_PRICE
+        description: Trading price at the end of the period
+      - name: TRADED_VOLUME
+        description: Total value traded
+      - name: NUMBER_OF_TRADES
+        description: Number of distinct trades during the period
+
+
