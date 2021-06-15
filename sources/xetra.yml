@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw__stocks
+    database: DEMO_DB
+    schema: XETRA_RAW
+    tags:
+      - "stocks"
+    tables:
+      - name: STOCKS
+        tags:
+          - "stocks"
+          - "price"
+          - "volume"

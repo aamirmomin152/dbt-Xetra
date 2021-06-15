@@ -21,7 +21,7 @@ WITH STOCKS AS (
     , EndPrice::float AS END_PRICE
     , TradedVolume::float AS TRADED_VOLUME
     , NumberOfTrades::int AS NUMBER_OF_TRADES
-    FROM "DEMO_DB"."XETRA_RAW"."STOCKS"
+    FROM {{ source('raw__stocks', 'STOCKS') }}
 )
 
 SELECT * 
